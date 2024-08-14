@@ -14,7 +14,7 @@ function News({ category = "general" }) {
 
   async function updateNews(page) {
 
-    let url = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${API_KEY}&page=${page}&pageSize=15`
+    let url = `https://newsapi.org/v2/top-headlines?country=in&category=${category}&apiKey=${API_KEY}&page=${page}&pageSize=15`
     const data = await fetch(url);
     const json = await data.json();
     setArticle(json.articles);
